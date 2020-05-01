@@ -5,4 +5,8 @@ let miComidaPreferida = {
   ingredientes: ['carne', 'cebolla', 'verdeo', 'huevo duro', 'comino', 'pimentón', 'aji', 'sal']
 }
 
-miComidaPreferida.push()
+miComidaPreferida.llevaMasDeCincoIngredientes = miComidaPreferida.ingredientes.length > 5
+
+miComidaPreferida.cantidadDeVecesQueMeCocine = miComidaPreferida.cantidadDeVecesQueComi - miComidaPreferida.cantidadDeVecesQueMeCocinaron
+
+console.log(miComidaPreferida)
