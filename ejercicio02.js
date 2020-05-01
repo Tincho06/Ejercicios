@@ -5,3 +5,11 @@ function calcularAreaRectangulo(b, h) {
 }
 
 console.log(calcularAreaRectangulo(5,10))
+
+function calcularPrecioTotal(precioUnitario, cantidadUnidades, costoEnvio) {
+  precioAbonarCliente = (precioUnitario * cantidadUnidades) + costoEnvio
+
+  return precioAbonarCliente
+}
+
+console.log(calcularPrecioTotal(10,5,8))
