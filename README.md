@@ -1,2 +1,2 @@
 # Ejercicios
- Ejercicios de clases programación jevascript
+ Ejercicios de clases programación javascript
