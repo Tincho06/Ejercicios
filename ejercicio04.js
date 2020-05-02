@@ -22,3 +22,25 @@ console.log(calcularResultadoDeExamen(8))
 console.log(calcularResultadoDeExamen(10))
 
 //Funciòn para determinar si son hermanos
+
+function sonHermanos(objeto1, objeto2) {
+  if (objeto1.padre === objeto2.padre && objeto1.madre === objeto2.madre) {
+    return true
+  } else {
+    return false
+  }
+}
+
+const sujeto1 = {
+  nombre: 'Pedro',
+  madre: 'María',
+  padre: 'Juan',
+}
+
+const sujeto2 = {
+  nombre: 'José',
+  madre: 'María',
+  padre: 'Juan',
+}
+
+console.log(sonHermanos(sujeto1, sujeto2))
