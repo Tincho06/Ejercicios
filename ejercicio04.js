@@ -1,5 +1,7 @@
 //ejercicio04
 
+///if Calcular resultado de examen
+
 function calcularResultadoDeExamen(notaExamen) {
   
     if (notaExamen < 4) {
@@ -18,3 +20,5 @@ console.log(calcularResultadoDeExamen(5))
 console.log(calcularResultadoDeExamen(6))
 console.log(calcularResultadoDeExamen(8))
 console.log(calcularResultadoDeExamen(10))
+
+//Funciòn para determinar si son hermanos
