@@ -44,3 +44,9 @@ const sujeto2 = {
 }
 
 console.log(sonHermanos(sujeto1, sujeto2))
+
+//Funcìón de contar espacios
+
+function contarEspacios(texto) {
+  let miTexto = texto.length
+}
