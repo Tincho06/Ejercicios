@@ -48,5 +48,14 @@ console.log(sonHermanos(sujeto1, sujeto2))
 //Funcìón de contar espacios
 
 function contarEspacios(texto) {
-  let miTexto = texto.length
+  let miTextoEspacios = 0
+  for (i = 0; i < texto.length; i++) {
+    if (texto[i] === ' ') {
+      miTextoEspacios = miTextoEspacios + 1
+
+    }
+  }
+  return miTextoEspacios
 }
+
+console.log(contarEspacios('Mi texto tiene varios espacios.'))
