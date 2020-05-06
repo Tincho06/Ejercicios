@@ -36,3 +36,15 @@ misTweets = [
 ]
 
 console.log(buscarTweets(misTweets, 'caso'))
+
+
+
+/*3. Definir una función censurarTexto que reciba una frase y una lista de expresiones
+censuradas y devuelva la frase reemplazando esas expresiones por astericos que tengan
+su mismo tamaño.*/
+
+function censurarTexto(frase, listaCensura) {
+  for (let i = 0; i < listaCensura.length; i++) {
+    Things[i]
+  }
+}
