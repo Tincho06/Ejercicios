@@ -44,7 +44,14 @@ censuradas y devuelva la frase reemplazando esas expresiones por astericos que t
 su mismo tamaño.*/
 
 function censurarTexto(frase, listaCensura) {
+  let texto = frase
   for (let i = 0; i < listaCensura.length; i++) {
-    Things[i]
+    terminoCensurado = listaCensura[i]
+    if (texto.includes(terminoCensurado)) {
+      texto.replace(terminoCensurado = '*')
+    }
   }
+  return texto
 }
+
+console.log(censurarTexto('algunas de estas palabras se censurará como prueba', ['estas',' como']))
