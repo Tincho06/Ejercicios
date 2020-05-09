@@ -44,11 +44,11 @@ censuradas y devuelva la frase reemplazando esas expresiones por astericos que t
 su mismo tamaño.*/
 
 function censurarTexto(frase, listaCensura) {
-  let texto = frase
+  let fraseCensurada = frase
   for (let i = 0; i < listaCensura.length; i++) {
     terminoCensurado = listaCensura[i]
-    if (texto.includes(terminoCensurado)) {
-      texto.replace(terminoCensurado = '*')
+    if (frase.includes(terminoCensurado)) {
+      fraseCensurada = fraseCensurada
     }
   }
   return texto
