@@ -43,15 +43,27 @@ console.log(buscarTweets(misTweets, 'caso'))
 censuradas y devuelva la frase reemplazando esas expresiones por astericos que tengan
 su mismo tamaño.*/
 
-function censurarTexto(frase, listaCensura) {
-  let fraseCensurada = frase
-  for (let i = 0; i < listaCensura.length; i++) {
-    terminoCensurado = listaCensura[i]
-    if (frase.includes(terminoCensurado)) {
-      fraseCensurada = fraseCensurada
+function convertirExpresionAAsterisco(expresion) {
+  let resultado = ''
+
+  for (let i = 0; i < expresion.length; i++) {
+    resultado += '*'
+  }
+
+  return resultado
+}
+
+function censurarTexto(texto, expresionesCensuradas) {
+  let nuevoTexto = texto
+
+  for (let i = 0; i < expresionesCensuradas.length; i++) {
+    const expresionCensurada = expresionesCensuradas[i]
+    if (nuevoTexto.includes(expresionCensurada)) {
+      nuevoTexto = nuevoTexto.replace(expresionCensurada, convertirExpresionAAsterisco(expresionCensurada))
     }
   }
-  return texto
+
+  return nuevoTexto
 }
 
 console.log(censurarTexto('algunas de estas palabras se censurará como prueba', ['estas',' como']))

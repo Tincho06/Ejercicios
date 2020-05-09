@@ -97,3 +97,5 @@ let ingredientesLista = ['carne', 'Ajo']
 
 
 console.log(obtenerRecetaPorIngredientes(comidas, ingredientesLista))
+
+
