@@ -48,3 +48,11 @@ function cargaCliente() {
     document.querySelector('.confirma').innerHTML = 'La banda ' + cliente + 'fue cargada'
   }
 }
+
+function controlSemanal(duraciónSesiones, montoPagos, cliente) {
+  const valorHora = 100
+  let saldo = duraciónSesiones / 60 * 100 - montoPagos
+  if (saldo > 0) {
+    console.log('Llamar a cliente ' + cliente + ', debe $' + saldo)
+  }
+}
