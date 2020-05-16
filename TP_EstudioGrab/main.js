@@ -66,7 +66,7 @@ function obtenerMejoresClientes(clientes) {
     cliente = clientes[i]
 
     gastadoPorClientes.push({
-      nombre: cliente.nombre,
+      nombre: cliente.nombreBanda,
       montoGastado: obtenerGastadoPorCliente(cliente),
     })
   }
@@ -76,8 +76,8 @@ function obtenerMejoresClientes(clientes) {
   agarrar los primeros 5 y devolver sus nombres
   */
 
-  gastadoPorClientes.sort(function (a, b){
-    return b - a
+  let mejoresClientes = gastadoPorClientes.sort(function (a, b){
+    return (b.montoGastado - a.montoGastado)
   })
 
   mejoresClientes = gastadoPorClientes.slice(0, 5)
