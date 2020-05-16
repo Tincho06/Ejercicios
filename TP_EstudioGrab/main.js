@@ -77,10 +77,12 @@ function obtenerMejoresClientes(clientes) {
   */
 
   gastadoPorClientes.sort(function (a, b){
-    return a - b
+    return b - a
   })
 
-  //return mejoresClientes
+  mejoresClientes = gastadoPorClientes.slice(0, 5)
+
+  return mejoresClientes
 }
 
 
@@ -104,6 +106,18 @@ function obtenerFacturacionEn(clientes, mes, anio) {
 
     retornar la variable facturacion
   */
+
+  let facturacionEnFechaBuscada = 0
+
+  for (let i = 0; i < clientes.length; i++) {
+    const cliente = clientes[i]
+
+    for (var j = 0; j < cliente.pagos.length; j++) {
+      const pago = cliente.pagos[j]
+
+      if (pago.fecha.includes()) {}
+    }
+  }
 }
 
 function predecirGrabacionesDeSemanaQueViene() {
