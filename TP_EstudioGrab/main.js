@@ -1,73 +1,6 @@
-//Clientes
-
-Clientes = [
-  {
-    nombreBanda: 'Moco de cuarentena',
-    telefono: '123456987',
-    sesiones: [
-      {
-        fecha: '01/01/2020',
-        duracion: 1,
-      },
-      {
-        fecha: '06/01/2020',
-        duracion: 2,
-      }
-    ],
-    pagos: [
-      {
-        fecha: '01/01/2020',
-        monto: 150,
-      }
-    ]
-  },
-  {
-    nombreBanda: 'Bigotes con Nesquick',
-    telefono: '25896300',
-    sesiones: [
-      {
-        fecha: '15/04/2020',
-        duracion: 2,
-      },
-      {
-        fecha: '26/04/2020',
-        duracion: 3,
-      }
-    ],
-    pagos: [
-      {
-        fecha: '20/04/2020',
-        monto: 100,
-      }
-    ]
-  },
-  {
-    nombreBanda: 'La de cajú ya la pagué',
-    telefono: '0303456',
-    sesiones: [
-      {
-        fecha: '10/03/2020',
-        duracion: 2,
-      },
-      {
-        fecha: '15/04/2020',
-        duracion: 3,
-      }
-    ],
-    pagos: [
-      {
-        fecha: '15/04/2020',
-        monto: 100,
-      }
-    ]
-  }
-]
-//console.log(listaClientes)
-
-
 const VALOR_POR_HORA = 100
 
-function controlSemanal(listaClientes) {
+function controlSemanal(clientes) {
   
   /*Recibe una lista de clientes y devuelve una lista de deudores
     Un deudor tiene: nombre, teléfono y monto a pagar.
@@ -80,33 +13,101 @@ function controlSemanal(listaClientes) {
 
   const deudores = []
 
-  for (let i = 0; i < listaClientes.length; i++) {
-    cliente = listaClientes[i]
+  for (let i = 0; i < clientes.length; i++) {
+    const cliente = clientes[i]
 
-    let duracionDeSesiones = 0
+    const gastadoDeCliente = obtenerGastadoPorCliente(cliente)
 
-    for (let j = 0; j < cliente.sesiones.length; j++) {
-      const sesion = cliente.sesiones[i]
-
-      duracionDeSesiones += sesion.duracion
-    }
-
-    const gastadoPoElCliente = duracionDeSesiones * VALOR_POR_HORA
-
-    let montosPagados = 0
+    let pagadoDeCliente = 0
 
     for (j = 0; j < cliente.pagos.length; j++) {
       const pago = cliente.pagos[j]
 
-      montosPagados += pago.monto
+      pagadoDeCliente += pago.monto
     }
-
     
+    const deudaDeCliente = gastadoDeCliente - pagadoDeCliente
 
-    const pagosDelCliente =
+    if (deudaDeCliente > 0) {
+      deudores.push({
+        nombre: cliente.nombreBanda,
+        telefono: cliente.telefono,
+        monto: deudaDeCliente,
+      })
+    }
   }
 
   return deudores
 }
 
-console.log(controlSemanal(90, 100, 'aaaa'))
+
+/*Ahora propongo que los ayudemos a analizar su negocio. Los vamos a ayudar a hacer
+algo que con la carpeta en papel no pueden hacer (o al menos les costaría mucho).
+Intentemos saber quiénes son sus mejores 5 clientes, aquellos que más ingresos les
+generaron.*/
+
+function obtenerMejoresClientes(clientes) { 
+  /*
+    1. 
+    recibe una lista de clientes y devuelve los mejores 5, aquellos que mas gastaron,
+    siendo lo que gasto cada cliente, la sumatoria de las duraciones de sus grabaciones
+    multiplicada por el valor por hora
+
+    3.
+    por cada cliente:
+      calcular cuanto gastó
+
+    ordenar los clientes segun cuanto gastaron de mayor a menor y devolver los primeros 5
+  */
+
+  const gastadoPorClientes = []
+
+  for (let i = 0; i < clientes.length; i++) {
+    cliente = clientes[i]
+
+    gastadoPorClientes.push({
+      nombre: cliente.nombre,
+      montoGastado: obtenerGastadoPorCliente(cliente),
+    })
+  }
+
+  /*
+  falta ordenar la lista gastadoPorClientes segun la propiedad montoGastado,
+  agarrar los primeros 5 y devolver sus nombres
+  */
+
+  gastadoPorClientes.sort(function (a, b){
+    return a - b
+  })
+
+  //return mejoresClientes
+}
+
+
+function obtenerFacturacionEn(clientes, mes, anio) {
+  /*
+    recibe una lista de clientes, un mes y un año y tiene que devolver la cantidad de plata
+    que pagaron los clientes en ese mes y año.
+  */
+
+  /*
+    definir variable facturacion en 0
+
+    recorrer lista de clientes (for):
+        ya tengo cada cliente, entonces
+
+        recorro la lista de pagos de este cliente (for):
+            ya tengo cada pago, entonces
+
+            veo si la fecha de este pago coincide con la fecha del parametro (if):
+                le sumo a la variable facturacion este monto
+
+    retornar la variable facturacion
+  */
+}
+
+function predecirGrabacionesDeSemanaQueViene() {
+  /*
+  pensar...
+  */
+}
