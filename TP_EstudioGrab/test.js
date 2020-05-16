@@ -70,7 +70,67 @@ const misClientes = [
         monto: 200,
       }
     ]
-  }
+  },
+  {
+    nombreBanda: 'Los misterios de Git',
+    telefono: '0303456',
+    grabaciones: [
+      {
+        fecha: '10/03/2020',
+        duracion: 5,
+      },
+      {
+        fecha: '15/04/2020',
+        duracion: 3,
+      }
+    ],
+    pagos: [
+      {
+        fecha: '15/04/2020',
+        monto: 300,
+      }
+    ]
+  },
+  {
+    nombreBanda: '0000',
+    telefono: '0303456',
+    grabaciones: [
+      {
+        fecha: '10/03/2020',
+        duracion: 1,
+      },
+      {
+        fecha: '15/04/2020',
+        duracion: 6,
+      }
+    ],
+    pagos: [
+      {
+        fecha: '15/04/2020',
+        monto: 300,
+      }
+    ]
+  },
+  {
+    nombreBanda: 'pi al cuadrado',
+    telefono: '0303456',
+    grabaciones: [
+      {
+        fecha: '10/03/2020',
+        duracion: 2,
+      },
+      {
+        fecha: '15/04/2020',
+        duracion: 2,
+      }
+    ],
+    pagos: [
+      {
+        fecha: '15/04/2020',
+        monto: 300,
+      }
+    ]
+  },
 ]
 
 const misDeudores = controlSemanal(misClientes)
