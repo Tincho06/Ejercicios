@@ -1,5 +1,6 @@
 const VALOR_POR_HORA = 100
 
+//1
 function controlSemanal(clientes) {
   
   /*Recibe una lista de clientes y devuelve una lista de deudores
@@ -40,7 +41,7 @@ function controlSemanal(clientes) {
   return deudores
 }
 
-
+//2
 /*Ahora propongo que los ayudemos a analizar su negocio. Los vamos a ayudar a hacer
 algo que con la carpeta en papel no pueden hacer (o al menos les costaría mucho).
 Intentemos saber quiénes son sus mejores 5 clientes, aquellos que más ingresos les
@@ -85,7 +86,7 @@ function obtenerMejoresClientes(clientes) {
   return mejoresClientes
 }
 
-
+//3
 function obtenerFacturacionEn(clientes, mes, anio) {
   /*
     recibe una lista de clientes, un mes y un año y tiene que devolver la cantidad de plata
@@ -115,9 +116,12 @@ function obtenerFacturacionEn(clientes, mes, anio) {
     for (var j = 0; j < cliente.pagos.length; j++) {
       const pago = cliente.pagos[j]
 
-      if (pago.fecha.includes()) {}
+      if (pago.fecha.includes(mes + '/' + anio)) {
+        facturacionEnFechaBuscada += pago.monto
+      }
     }
   }
+  return facturacionEnFechaBuscada
 }
 
 function predecirGrabacionesDeSemanaQueViene() {
