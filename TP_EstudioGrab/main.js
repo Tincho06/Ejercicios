@@ -124,8 +124,23 @@ function obtenerFacturacionEn(clientes, mes, anio) {
   return facturacionEnFechaBuscada
 }
 
-function predecirGrabacionesDeSemanaQueViene() {
-  /*
-  pensar...
-  */
+function predecirGrabacionesDeSemanaQueViene(clientes, mes, anio) {
+  
+  let grabacionesEnFechaBuscada = 0
+
+  for (let i = 0; i < clientes.length; i++) {
+    const cliente = clientes[i]
+
+    for (var j = 0; j < cliente.grabaciones.length; j++) {
+      const grabacion = cliente.grabaciones[j]
+
+      if (grabacion.fecha.includes(mes + '/' + anio)) {
+        grabacionesEnFechaBuscada += grabacion.duracion
+      }
+    }
+  }
+
+  let promedioSemanal = grabacionesEnFechaBuscada / 30 * 7
+
+  return promedioSemanal
 }

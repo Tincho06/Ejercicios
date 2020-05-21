@@ -133,6 +133,8 @@ const misClientes = [
   },
 ]
 
+
+
 const misDeudores = controlSemanal(misClientes)
 
 const misMejoresClientes = obtenerMejoresClientes(misClientes)
