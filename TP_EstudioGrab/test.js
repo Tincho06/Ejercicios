@@ -133,8 +133,30 @@ const misClientes = [
   },
 ]
 
+//4
+function predecirGrabacionesDeSemanaQueViene(clientes, mes, anio) {
+  
+  let grabacionesEnFechaBuscada = 0
 
+  for (let i = 0; i < clientes.length; i++) {
+    const cliente = clientes[i]
 
-const misDeudores = controlSemanal(misClientes)
+    for (var j = 0; j < cliente.grabaciones.length; j++) {
+      const grabacion = cliente.grabaciones[j]
 
-const misMejoresClientes = obtenerMejoresClientes(misClientes)
+      if (grabacion.fecha.includes(mes + '/' + anio)) {
+        grabacionesEnFechaBuscada += grabacion.duracion
+      }
+    }
+  }
+
+  let promedioSemanal = grabacionesEnFechaBuscada / 30 * 7
+
+  return promedioSemanal
+}
+
+console.log(predecirGrabacionesDeSemanaQueViene(misClientes, '04', '2020'))
+
+//const misDeudores = controlSemanal(misClientes)
+
+//const misMejoresClientes = obtenerMejoresClientes(misClientes)
