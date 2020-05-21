@@ -124,6 +124,7 @@ function obtenerFacturacionEn(clientes, mes, anio) {
   return facturacionEnFechaBuscada
 }
 
+//4
 function predecirGrabacionesDeSemanaQueViene(clientes, mes, anio) {
   
   let grabacionesEnFechaBuscada = 0
