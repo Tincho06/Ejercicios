@@ -1,0 +1,45 @@
+javascript: la evaluación
+Hora de ser evaluados.
+El examen consiste en tres consignas. Deben resolverlas creando un programa en
+Javascript que las satisfaga.
+Tienen tiempo para entregarlo (por privado, en un repositorio de Github) hasta el jueves 28
+de mayo.
+Se sugiere por cada consigna antes de programarla, planificar una estrategia pensando en primer punto cómo resolver la consigna manualmente, luego incorporar nociones de
+programación y por último, definir la estrategia específica.
+
+Ubiquémonos dentro de una librería comunitaria, la cual tiene libros que fueron donados
+y se ocupa de redistribuirlo entre hambrientos lectores que, después de leerlos, deben
+devolverlos para lograr que la ruede funcione.
+Actualmente la libreria se maneja con un cuaderno en donde se anotan los distintos libros
+que van ingresando y egresando, de modo que el trabajo es cada vez más propensos a
+errores.
+Por lo tanto, les propongo pensar una solución para este caso.
+
+Por cada libro se anota su título, su autor, su año de lanzamiento, su editorial y su ISBN
+(International Standard Book Number).
+Estos libros se exhiben en una planilla y los lectores pueden alquilarlos, siempre
+indicando su ISBN (el código que los identifica).
+Creemos un programa que le permita a los administradores de la librería comunitaria saber
+si un libro en particular está o no disponible (es decir, si puede alquilarse o ya fue
+alquilado previamente y estamos a la espera de su devolución)
+
+Por otra parte, es frecuente encontrarse con fanáticos de un autor literario.
+La precisión de las recomendaciones de los administradores de la librería no es del todo
+buena debido a la cantidad de libros que tienen, por lo que muchas veces los lectores no
+pueden dar con los libros que buscan de su autor preferido.
+Ayudemoslos dándoles una herramienta en la que puedan buscar qué libros están
+disponibles sobre un autor determinador.
+
+Si bien la libreria funciona con donaciones de libros, en los últimos años han brotado
+ciertos contactos con editoriales y distribuidoras de libros que hacen posible el encargo de
+libros particulares.
+Sería una buena idea saber cuáles son los 10 libros que más se piden para decirles a los
+administradores que encarguen más stock de los mismos.
+¿Qué podemos ofrecerles para esto?
+
+Esas son las tres consignas.
+Tienen tiempo, entonces, para entregar por privado un repositorio de Github que las cumpla
+hasta el jueves 28 de mayo.
+Recuerden planificar antes de programar, seguir las buenas prácticas de las que siempre
+hablamos (indentación, no repetir código, separación de archivos).
+¡Éxitos!
