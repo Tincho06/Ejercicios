@@ -5,40 +5,120 @@ indicando su ISBN (el código que los identifica).*/
 
 const listaDeLibros = [
   {
-    titulo:'El corazón de la piedra', //string nombre de la obra.
-    autor:'José María García López', //string nombre del autor.
+    titulo:'Cuentos completos', //string nombre de la obra.
+    autor:'Jorge Luis Borges', //string nombre del autor.
     anio:'2013', //string año de lanzamiento.
-    editorial:'Nocturna', //string nombre de la Editorial.
-    isbn: 9788493975074, //integer código ISBN que identifica al libro.
+    editorial:'DEBOLSILLO', //string nombre de la Editorial.
+    isbn: 9788499891620, //integer código ISBN que identifica al libro.
     alquilado: true, // boolean que indica si està alquilado (true) o no (false).
-    cantidadPedidos: 15, //integer con la cantidad de veces que fue alquilado.
+    cantidadPedidos: 35, //integer con la cantidad de veces que fue alquilado.
   },
   {
-    titulo:'Salmos de vísperas', //string nombre de la obra.
-    autor:'Esteban Hernández Castelló', //string nombre del autor.
-    anio:'2003', //string año de lanzamiento.
-    editorial:'Obra social de Caja de Avila', //string nombre de la Editorial.
-    isbn: 849329148, //integer código ISBN que identifica al libro.
-    alquilado: false, // boolean que indica si està alquilado (true) o no (false).
-    cantidadPedidos: 10, //integer con la cantidad de veces que fue alquilado.
-  }
+    titulo:'Ficciones',
+    autor:'Jorge Luis Borges',
+    anio:'2018',
+    editorial:'DEBOLSILLO',
+    isbn: 9788493975074,
+    alquilado: false,
+    cantidadPedidos: 8,
+  },
+  {
+    titulo:'El Aleph',
+    autor:'Jorge Luis Borges',
+    anio:'2019',
+    editorial:'DEBOLSILLO',
+    isbn: 9788426406392,
+    alquilado: false,
+    cantidadPedidos: 20,
+  },
+  {
+    titulo:'El Tunel',
+    autor:'Ernesto Sábato',
+    anio:'2006',
+    editorial:'Ediciones Cátedra',
+    isbn: 9788437600895,
+    alquilado: true,
+    cantidadPedidos: 41,
+  },
+  {
+    titulo:'Sobre héroes y tumbas',
+    autor:'Ernesto Sábato',
+    anio:'2003',
+    editorial:'Austral',
+    isbn: 9788432248337,
+    alquilado: false,
+    cantidadPedidos: 32,
+  },
+  {
+    titulo:'Antes del fin',
+    autor:'Ernesto Sábato',
+    anio:'2002',
+    editorial:'Austral',
+    isbn: 9788432248344,
+    alquilado: false,
+    cantidadPedidos: 22,
+  },
+  {
+    titulo:'El corazón de la piedra',
+    autor:'José María García López',
+    anio:'2013',
+    editorial:'Nocturna',
+    isbn: 9788493975074,
+    alquilado: true,
+    cantidadPedidos: 15,
+  },
+  {
+    titulo:'Salmos de vísperas',
+    autor:'Esteban Hernández Castelló',
+    anio:'2003',
+    editorial:'Obra social de Caja de Avila',
+    isbn: 849329148,
+    alquilado: false,
+    cantidadPedidos: 3,
+  },
+  {
+    titulo:'Sarasasa',
+    autor:'Esteban Hernández Castelló',
+    anio:'2003',
+    editorial:'Obra social de Caja de Avila',
+    isbn: 12345678,
+    alquilado: false,
+    cantidadPedidos: 7,
+  },
+  {
+    titulo:'Ensayo sobre la ceguera',
+    autor:'José Saramago',
+    anio:'2015',
+    editorial:'DEBOLSILLO',
+    isbn: 9788490628720,
+    alquilado: false,
+    cantidadPedidos: 58,
+  },
+  {
+    titulo:'El cuaderno del año del Nobel',
+    autor:'José Saramago',
+    anio:'2018',
+    editorial:'DEBOLSILLO',
+    isbn: 9788420434599,
+    alquilado: false,
+    cantidadPedidos: 38,
+  },
+  {
+    titulo:'La caverna',
+    autor:'José Saramago',
+    anio:'2015',
+    editorial:'DEBOLSILLO',
+    isbn: 9788490628744,
+    alquilado: true,
+    cantidadPedidos: 41,
+  },
 ]
 
+// Libro buscado por ISBN
+libroBuscado(listaDeLibros, 9788437600895)
 
-function libroBuscado(listaDeLibros, isbn) {
-  
-  for (let i = 0; i < listaDeLibros.length; i++) {
-    const libro = listaDeLibros[i]
+//Libros disponibles de un autor determinado
+librosDisponiblesPorAutor(listaDeLibros, 'Ernesto Sábato')
 
-    if (libro.isbn === isbn) {
-      if (libro.alquilado === true) {
-        return 'El libro ' + libro.titulo + ' de ' + libro.autor + ' está alquilado'
-      } else {
-      return 'El libro ' + libro.titulo + ' de ' + libro.autor + ' está disponible'
-      }
-    }
-    
-  }
-  return 'Libro no encontrado'
-}
-libroBuscado(listaDeLibros, 849329148)
+//Top 10 libros mas buscados
+librosMasBuscados(listaDeLibros)
