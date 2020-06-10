@@ -25,25 +25,38 @@ window.onload = function() {
 
   function chequearEdad(event) {
 
-    if (input.value < 18) {
-  
-      aviso.style = "background-color: red; padding: 10px; width: 40%; margin-top: 15px; margin-left: 20px"
+    const edadUsuario = input.value
 
-      textoCartel.innerHTML = 'Es menor de edad.'
-      textoCartel.classList.add('texto_cartel')
+    if (edadUsuario !== '') {
 
-      const mensaje = document.querySelector('.aviso')
-      mensaje.append(textoCartel)
+      if (edadUsuario < 18) {
+    
+        aviso.style = "background-color: red; padding: 10px; width: 40%; margin-top: 15px; margin-left: 20px"
 
-    } else if (input.value >= 18) {
+        textoCartel.innerHTML = 'Es menor de edad.'
+        textoCartel.classList.add('texto_cartel')
 
-      aviso.style = "background-color: green; padding: 10px; width: 40%; margin-top: 15px; margin-left: 20px"
+        const mensaje = document.querySelector('.aviso')
+        mensaje.append(textoCartel)
 
-      textoCartel.innerHTML = 'Bienvenido.'
-      textoCartel.classList.add('texto_cartel')
+      } else if (edadUsuario >= 18) {
 
-      const mensaje = document.querySelector('.aviso')
-      mensaje.append(textoCartel)
+        aviso.style = "background-color: green; padding: 10px; width: 40%; margin-top: 15px; margin-left: 20px"
+
+        textoCartel.innerHTML = 'Bienvenido.'
+        textoCartel.classList.add('texto_cartel')
+
+        const mensaje = document.querySelector('.aviso')
+        mensaje.append(textoCartel)
+      }
+    } else {
+        aviso.style = "background-color: grey; padding: 10px; width: 40%; margin-top: 15px; margin-left: 20px"
+
+        textoCartel.innerHTML = 'Ingrese su edad.'
+        textoCartel.classList.add('texto_cartel')
+
+        const mensaje = document.querySelector('.aviso')
+        mensaje.append(textoCartel)
     }
   }
 
