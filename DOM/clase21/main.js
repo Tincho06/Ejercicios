@@ -65,9 +65,16 @@ window.onload = function() {
     chequearEdad()
   }
 
-  input.onkeydown = function() {
+  input.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
     chequearEdad()
+
+    return
     }
-  }
+
+    if (isNaN(event.key)) {
+      input.value = ''
+    }
+  })
+
 }
