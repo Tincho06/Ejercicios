@@ -387,10 +387,7 @@ body {
   border-radius: 50%;
   background: red;
   position: absolute;
-}
-
-.animacion {
-  animation-timing-function: ease-in-out;
+  
 }
 
 .arrows {

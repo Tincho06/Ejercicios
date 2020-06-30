@@ -11,7 +11,7 @@ El color del círculo debe poder elegirse entre rojo, azul y verde.
 Bonus points:
 • ¿Qué pasa si el círculo llega a un extremo de la pantalla? Pensar cómo solucionar este
 problema (si es que lo es) y programar la solución.
-   - Cuando el cìrculo llega al lìmite de la pantalla debe desaparecer y reaparecer del lado opuesto.
+   - Cuando el círculo llega al lìmite de la pantalla debe desaparecer y reaparecer del lado opuesto.
 
 • Agregar una opción para que el círculo se mueva solo aleatoriamente.
 
@@ -19,13 +19,12 @@ problema (si es que lo es) y programar la solución.
 al chocarse con una pared.
  */
 
+
 window.onload = function() {
   
   const container = document.querySelector('.container')
   const containerHeight = document.querySelector('.container').offsetHeight
   const containerWidth = document.querySelector('.container').offsetWidth
-  //console.log(containerHeight)
-  //console.log(containerWidth)
 
   const arrows = document.querySelectorAll('.arrow')
 
@@ -55,7 +54,7 @@ window.onload = function() {
       
       if (circleX < containerWidth && circleX > 0) { 
         circle.style.left = circleX-10+"px" 
-        circle.classList.add('animacion')
+        
       } else {
         circle.style.left = containerWidth - circleWidth+"px"
       }
@@ -65,7 +64,7 @@ window.onload = function() {
       
       if (circleY < containerHeight && circleY > 0) { 
         circle.style.top = circleY-10+"px" 
-        circle.classList.add('animacion')
+        
       } else {
         circle.style.top = containerHeight - circleHeight+"px"
       }
@@ -75,7 +74,7 @@ window.onload = function() {
       
       if (circleX <= containerWidth - circleWidth) { 
         circle.style.left = circleX+10+"px" 
-        circle.classList.add('animacion')
+        
       } else {
         circle.style.left = 0 +"px" //containerWidth - circleX+"px"
       }
@@ -85,7 +84,7 @@ window.onload = function() {
       
       if (circleY <= containerHeight - circleHeight) { 
         circle.style.top = circleY+10+"px" 
-        circle.classList.add('animacion')
+        
       } else {
         circle.style.top = 0 +"px" //containerHeight - circleY+"px"
       }
@@ -103,7 +102,7 @@ window.onload = function() {
     
     if (circleY < containerHeight && circleY > 0) { 
       circle.style.top = circleY-10+"px" 
-      circle.classList.add('animacion')
+      
     } else {
       circle.style.top = containerHeight - circleHeight+"px"
     }
@@ -118,7 +117,7 @@ window.onload = function() {
       
     if (circleY < containerHeight - circleHeight) { 
         circle.style.top = circleY+10+"px" 
-        circle.classList.add('animacion')
+        
       } else {
         circle.style.top = 0 +"px" //containerHeight - circleY+"px"
       }
@@ -133,7 +132,7 @@ window.onload = function() {
       
     if (circleX < containerWidth && circleX > 0) { 
       circle.style.left = circleX-10+"px" 
-      circle.classList.add('animacion')
+      
     } else {
       circle.style.left = containerWidth - circleWidth+"px"
     }
@@ -148,7 +147,7 @@ window.onload = function() {
     
     if (circleX < containerWidth - circleWidth) { 
         circle.style.left = circleX+10+"px" 
-        circle.classList.add('animacion')
+        
       } else {
         circle.style.left = 0 +"px" //containerWidth - circleX+"px"
       }
@@ -208,28 +207,6 @@ window.onload = function() {
       pause.style = "opacity: 1"
     }
   })
-
-  /*// controlY, determina dirección vertical: 1-baja|0-sube
-  let controlY = Math.floor((Math.random() * 1) + 0)
-
-
-  // controlX, determina dirección vertical: 1-derecha|0-izquierda
-  let controlX = Math.floor((Math.random() * 1) + 0)
-
-
-  // definimos las variables que contienen la posicion de la pelota
-  let x = y = 0
-
-  // definimos la velocidad de movimiento en pixels
-  let velocidad = 1
-
-  // variable que contiene 
-  let idSetInterval = 0
-
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
-  getRandomInt(5,20)*/
 
 }
 
