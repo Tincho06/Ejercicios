@@ -387,8 +387,8 @@ body {
   height: 80px;
   border-radius: 50%;
   background: red;
-  /*position: relative;*/
-  transition: all .20s;
+  position: absolute;
+  transition: all .20s linear;
 }
 
 
