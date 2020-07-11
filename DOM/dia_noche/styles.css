@@ -584,6 +584,7 @@ textarea {
     }
 
     40%{
+        right: 60%;
         opacity: 0;
     }
 
@@ -598,7 +599,7 @@ textarea {
     }
 
     70% {
-        opacity: 1;
+        opacity: 0.5;
     }
 
     100% {
@@ -620,7 +621,7 @@ textarea {
         opacity: 1;
     }
 
-    80% {
+    70% {
         top: 3%;
         left: 5%;
         opacity: 0;
