@@ -9,8 +9,6 @@
     height: 100vh;
     animation: dia_noche 48s;
     animation-iteration-count: infinite;
-    
-
 }
 
 .grass {
@@ -174,6 +172,114 @@
 
 }
 
+.star_cont {
+    width: 90%;
+    height: 30%;
+    position: absolute;
+    top: 5%;
+    
+}
+
+.star {
+    width: 5%;
+    height: 3%;
+    background-image: url('img/star.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    animation: stars 48s;
+    animation-iteration-count: infinite;
+}
+
+.star1 {
+    left: 30%;
+    top: 2%;
+}
+.star2 {
+    left: 35%;
+    top: 50%;
+}
+.star3 {
+    left: 40%;
+    top: 90%;
+}
+.star4 {
+    left: 48%;
+    top: 2%;
+}
+.star5 {
+    left: 50%;
+    top: 30%;
+}
+.star6 {
+    left: 57%;
+    top: 70%;
+}
+.star7 {
+    left: 60%;
+    top: 90%;
+}
+.star8 {
+    left: 68%;
+    top: 50%;
+}
+.star9 {
+    left: 75%;
+    top: 90%;
+}
+
+.temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25%;
+    width: 10%;
+    position: absolute;
+    right: 7%;
+    bottom: 15%;
+
+}
+
+.v_stick {
+    height: 55%;
+    width: 16%;
+    position: absolute;
+    left: 42%;
+    bottom: 12%;
+    border-radius: 10px;
+    background-color: red;
+
+}
+
+.v_stick_back {
+    height: 85%;
+    width: 30%;
+    position: absolute;
+    border-radius: 15px;
+    background-color: #fff;
+    opacity: 0.85;
+    
+}
+
+.ball {
+    height: 36%;
+    width: 44%;
+    position: absolute;
+    bottom: 11%;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.ball_back {
+    height: 44%;
+    width: 64%;
+    position: absolute;
+    bottom: 6%;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.85;
+}
+
 @keyframes dia_noche {
     0% {
         background-color: #DFF8F9;
@@ -211,8 +317,12 @@
         opacity: 1;
     }
 
+    30% {
+        opacity: 0;
+    }
+
     40%{
-        right: 60%;
+        right: 50%;
         opacity: 0;
     }
 
@@ -707,5 +817,23 @@
     100% {
         bottom: 0px;
         left: 84%;
+    }
+}
+
+@keyframes stars {
+    0% {
+        opacity: 0.2;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.2;
     }
 }
