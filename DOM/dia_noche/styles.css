@@ -241,7 +241,7 @@
 }
 
 .v_stick {
-    height: 55%;
+    height: 66%;
     width: 16%;
     position: absolute;
     left: 42%;
@@ -254,7 +254,7 @@
 }
 
 .v_stick_back {
-    height: 85%;
+    height: 100%;
     width: 30%;
     position: absolute;
     border-radius: 15px;
@@ -264,19 +264,19 @@
 }
 
 .ball {
-    height: 36%;
-    width: 44%;
+    height: 29%;
+    width: 35%;
     position: absolute;
-    bottom: 11%;
+    bottom: 4%;
     border-radius: 50%;
     background-color: red;
 }
 
 .ball_back {
-    height: 44%;
-    width: 64%;
+    height: 35%;
+    width: 51%;
     position: absolute;
-    bottom: 6%;
+    bottom: 0%;
     border-radius: 50%;
     background-color: #fff;
     opacity: 0.85;
