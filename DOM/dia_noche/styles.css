@@ -282,6 +282,19 @@
     opacity: 0.85;
 }
 
+.scale {
+    width: 12%;
+    height:70%;
+    position: absolute;
+    top: 10%;
+    left: 53%;
+}
+
+.deg {
+    border-bottom: 1px solid #000;
+    margin-bottom: 150%;
+}
+
 @keyframes dia_noche {
     0% {
         background-color: #DFF8F9;
