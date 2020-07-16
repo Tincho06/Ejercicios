@@ -7,6 +7,10 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    
+}
+
+.container_animation {
     animation: dia_noche 48s;
     animation-iteration-count: infinite;
 }
@@ -32,6 +36,7 @@
     bottom: 28px;
 }
 
+/* Plantas */
 .plants_cont {
     overflow: hidden;
     width: 65%;
@@ -52,48 +57,76 @@
     background-size: contain;
 }
 
+/*1*/
 .flower2 {
-    background-image: url('img/flower2.png');
-    animation: flower2 48s;
+    background-image: url('img/flower2.png'); 
+}
+.flower2_animation {
+    animation: flowers 48s;
     animation-iteration-count: infinite;
 }
-
+/*2*/
 .cactus {
     background-image: url('img/cactus.png');
-    animation: cactus 48s;
-    animation-iteration-count: infinite;
+    left: 14%;
 }
-
+.cactus_animation {
+    animation: flowers 48s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+/*3*/
 .flower3 {
     background-image: url('img/flower3.png');
-    animation: flower3 48s;
-    animation-iteration-count: infinite;
+    left: 28%;
 }
-
+.flower3_animation {
+    animation: flowers 48s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+/*4*/
 .plant {
     background-image: url('img/plant.png');
-    animation: plant 48s;
-    animation-iteration-count: infinite;
+    left: 42%;
 }
-
+.plant_animation {
+    animation: flowers 48s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+/*5*/
 .flower4 {
     background-image: url('img/flower4.png');
-    animation: flower4 48s;
-    animation-iteration-count: infinite;
+    left: 56%;
 }
-
+.flower4_animation {
+    animation: flowers 48s;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+}
+/*6*/
 .garden-plant {
     background-image: url('img/garden-plant.png');
-    animation: garden-plant 48s;
-    animation-iteration-count: infinite;
+    left: 70%;
 }
-
+.garden-plant_animation {
+    animation: flowers 48s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+}
+/*7*/
 .flower {
     background-image: url('img/flower.png');
-    animation: flower 48s;
+    left: 84%;
+}
+.flower_animation {
+    animation: flowers 48s;
     animation-iteration-count: infinite;
+    animation-delay: 6s;
 }
 
+/* Nubes */
 .clouds_cont {
     width: 100%;
     height: 40%;
@@ -144,6 +177,7 @@
     animation-iteration-count: infinite;
 }
 
+/* Sol */
 .sun {
     width: 25%;
     height: 35%;
@@ -153,12 +187,15 @@
     background-size: contain;
     position: absolute;
     top: 3%;
-    right: 0%;
-    animation: sun 48s;
-    animation-iteration-count: infinite;
-
+    right: 0%;   
 }
 
+.sun_animation {
+    animation: sun 48s;
+    animation-iteration-count: infinite;
+}
+
+/* Luna */
 .moon {
     width: 17%;
     height: 27%;
@@ -167,17 +204,19 @@
     background-position: center;
     background-size: contain;
     position: absolute;
-    animation: moon 48s;
-    animation-iteration-count: infinite;
-
 }
 
+.moon_animation {
+    animation: moon 48s;
+    animation-iteration-count: infinite;
+}
+
+/* Estrellas */
 .star_cont {
     width: 90%;
     height: 30%;
     position: absolute;
     top: 5%;
-    
 }
 
 .star {
@@ -187,6 +226,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
+}
+
+.star_animation {
     animation: stars 48s;
     animation-iteration-count: infinite;
 }
@@ -228,6 +270,7 @@
     top: 90%;
 }
 
+/* Termometro */
 .temp {
     display: flex;
     align-items: center;
@@ -576,264 +619,36 @@
     }
 }
 
-@keyframes flower2 {
+@keyframes flowers {
     0% {
         bottom: 0px;
-        left: 0px;
     }
 
     28% {
         bottom: 0px;
-        left: 0px;
     }
 
     29% {
         bottom: 3%;
-        left: 0px;
     }
 
     32% {
         bottom: -100%;
-        left: 0px;
     }
 
     70% {
         bottom: -100%;
-        left: 0px;
     }
 
     72% {
         bottom: 0px;
-        left: 0px;
     }
 
     100% {
         bottom: 0px;
-        left: 0px;
     }
 }
 
-@keyframes cactus {
-    0% {
-        bottom: 0px;
-        left: 14%;
-    }
-
-    29% {
-        bottom: 0px;
-        left: 14%;
-    }
-
-    30% {
-        bottom: 3%;
-        left: 14%;
-    }
-
-    33% {
-        bottom: -100%;
-        left: 14%;
-    }
-
-    70% {
-        bottom: -100%;
-        left: 14%;
-    }
-
-    73% {
-        bottom: 0px;
-        left: 14%;
-    }
-
-    100% {
-        bottom: 0px;
-        left: 14%;
-    }
-}
-
-@keyframes flower3 {
-    0% {
-        bottom: 0px;
-        left: 28%;
-    }
-
-    30% {
-        bottom: 0px;
-        left: 28%;
-    }
-
-    31% {
-        bottom: 3%;
-        left: 28%;
-    }
-
-    34% {
-        bottom: -100%;
-        left: 28%;
-    }
-
-    70% {
-        bottom: -100%;
-        left: 28%;
-    }
-
-    74% {
-        bottom: 0px;
-        left: 28%;
-    }
-
-    100% {
-        bottom: 0px;
-        left: 28%;
-    }
-}
-
-@keyframes plant {
-    0% {
-        bottom: 0px;
-        left: 42%;
-    }
-
-    31% {
-        bottom: 0px;
-        left: 42%;
-    }
-
-    32% {
-        bottom: 3%;
-        left: 42%;
-    }
-
-    35% {
-        bottom: -100%;
-        left: 42%;
-    }
-
-    70% {
-        bottom: -100%;
-        left: 42%;
-    }
-
-    75% {
-        bottom: 0px;
-        left: 42%;
-    }
-
-    100% {
-        bottom: 0px;
-        left: 42%;
-    }
-}
-
-@keyframes flower4 {
-    0% {
-        bottom: 0px;
-        left: 56%;
-    }
-
-    32% {
-        bottom: 0px;
-        left: 56%;
-    }
-
-    33% {
-        bottom: 3%;
-        left: 56%;
-    }
-
-    36% {
-        bottom: -100%;
-        left: 56%;
-    }
-
-    70% {
-        bottom: -100%;
-        left: 56%;
-    }
-
-    76% {
-        bottom: 0px;
-        left: 56%;
-    }
-
-    100% {
-        bottom: 0px;
-        left: 56%;
-    }
-}
-
-@keyframes garden-plant {
-    0% {
-        bottom: 0px;
-        left: 70%;
-    }
-
-    33% {
-        bottom: 0px;
-        left: 70%;
-    }
-
-    34% {
-        bottom: 3%;
-        left: 70%;
-    }
-
-    37% {
-        bottom: -100%;
-        left: 70%;
-    }
-
-    70% {
-        bottom: -100%;
-        left: 70%;
-    }
-
-    77% {
-        bottom: 0px;
-        left: 70%;
-    }
-
-    100% {
-        bottom: 0px;
-        left: 70%;
-    }
-}
-
-@keyframes flower {
-    0% {
-        bottom: 0px;
-        left: 84%;
-    }
-
-    34% {
-        bottom: 0px;
-        left: 84%;
-    }
-
-    35% {
-        bottom: 3%;
-        left: 84%;
-    }
-
-    38% {
-        bottom: -100%;
-        left: 84%;
-    }
-
-    70% {
-        bottom: -100%;
-        left: 84%;
-    }
-
-    78% {
-        bottom: 0px;
-        left: 84%;
-    }
-
-    100% {
-        bottom: 0px;
-        left: 84%;
-    }
-}
 
 @keyframes stars {
     0% {

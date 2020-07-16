@@ -1,0 +1,172 @@
+/*Clases para los destintos horarios*/
+
+/*Cielo según horario*/
+
+.skyDawn {
+  background-color: #F7472D;
+}
+
+.skyMorning {
+  background-color: #43F2F4;
+}
+
+.skyEvening {
+  background-color: #2DA2E5;
+}
+
+.skySunset {
+  background-color: #F7005A;
+}
+
+.skyNight {
+  background-color: #010420;
+}
+
+/*Sol según horario*/
+
+.sunDawn {
+  top: 80%;
+  right: 0%;
+  transform: scale(0.8, 0.8); 
+}
+
+.sunMorning {
+  top: 15%;
+  right: 35%;
+}
+
+.sunEvening {
+  top: 3%;
+  left: 45%;
+}
+
+.sunSunset {
+  top: 70%;
+  left: 0%;
+}
+
+.sunNight {
+  opacity: 0;
+}
+
+
+/*Luna según horario*/
+.moonDawn {
+  top: 30%;
+  left: 0%;
+  opacity: 0.5;
+  transform: scale(0.8, 0.8); 
+}
+
+.moonMorning {
+  top: 70%;
+  left: 0%;
+  opacity: 0;
+}
+
+.moonEvening {
+  top: 30%;
+  right: 0%;
+  opacity: 0.2;
+  transform: scale(0.5, 0.5); 
+}
+
+.moonSunset {
+  top: 10%;
+  left: 65%;
+  opacity: 0.5;
+}
+
+.moonNight {
+  top: 10%;
+  left: 15%;
+  opacity: 1;
+}
+
+/*Flores según horario*/
+
+.flowerDawn {
+  bottom: -50px;
+}
+
+.flowerMorning {
+  bottom: 0px;
+}
+
+.flowerEvening {
+  bottom: 0px;
+}
+
+.flowerSunset {
+  bottom: -50px;
+}
+
+.flowerNight {
+  bottom: -100%;
+}
+
+/*Estrellas según horario*/
+
+.starsDawn {
+  opacity: 0.2;
+}
+
+.starsMorning {
+  opacity: 0;
+}
+
+.starsEvening {
+  opacity: 0;
+}
+
+.starsSunset {
+  opacity: 0.5;
+}
+
+.starsNight {
+  opacity: 1;
+}
+
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 40%;
+  top: 55%;
+  width: 20%;
+  height: 20%;
+  border: 2px solid #666;
+  border-radius: 20px;
+  opacity: 0.3;
+  background-color: #FFF;
+}
+
+.screen_cont {
+  width: 85%;
+  height: 85%;
+  font-family: 'Play', sans-serif;
+}
+
+.location {
+  height: 20%;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.deg_dato {
+  
+  font-size: 4em;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.time {
+  height: 10%;
+  font-size: 1em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+
+}
