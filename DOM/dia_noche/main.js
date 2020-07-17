@@ -1,6 +1,6 @@
 const http = new XMLHttpRequest()
 
-http.open('GET', 'http://api.weatherapi.com/v1/current.json?key=f0b13ebf0a6b46aa91b25351201707&q=Córdoba')
+http.open('GET', 'https://api.weatherapi.com/v1/current.json?key=f0b13ebf0a6b46aa91b25351201707&q=Córdoba')
 http.send()
 
 http.onreadystatechange = function() {
