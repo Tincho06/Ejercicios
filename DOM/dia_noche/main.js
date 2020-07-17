@@ -4,13 +4,13 @@ http.open('GET', 'https://api.weatherapi.com/v1/current.json?key=f0b13ebf0a6b46a
 http.send()
 
 http.onreadystatechange = function() {
-  http.responseText
+  https.responseText
 
-  if (http.responseText === '') {
+  if (https.responseText === '') {
     return
   }
 
-  const respuesta = JSON.parse(http.responseText)
+  const respuesta = JSON.parse(https.responseText)
 
   //console.log(respuesta.current.temp_c)
 
