@@ -1,31 +1,33 @@
-const http = new XMLHttpRequest()
+window.onload = function() {
 
-http.open('GET', 'https://api.weatherapi.com/v1/current.json?key=f0b13ebf0a6b46aa91b25351201707&q=Córdoba')
-http.send()
+  const http = new XMLHttpRequest()
 
-http.onreadystatechange = function() {
-  http.responseText
+  http.open('GET', 'https://api.weatherapi.com/v1/current.json?key=f0b13ebf0a6b46aa91b25351201707&q=Córdoba')
+  http.send()
 
-  if (http.responseText === '') {
-    return
-  }
+  http.onreadystatechange = function() {
+    http.responseText
 
-  const respuesta = JSON.parse(http.responseText)
+    if (http.responseText === '') {
+      return
+    }
 
-  //console.log(respuesta.current.temp_c)
+    const respuesta = JSON.parse(http.responseText)
 
-  const TEMP = respuesta.current.temp_c // temperatura en grados centígrados 
-  const TIME = respuesta.location.localtime // new Date() // fecha y hora
-  const HORA = TIME.substring(11,13)
-  //console.log('hora ' + HORA)
-  const LOCATION = respuesta.location.name
-  const DAWN = 7.45 // Horario del amanecer
-  const SUNSET= 18.50 // Horario anochecer
-  const SKY = respuesta.current.condition.text // Sunny
-  //console.log(SKY)
-  const RAIN = false // boolean
+    /// Variables con datos consulta ///
 
-  window.onload = function() {
+    const TEMP = respuesta.current.temp_c // temperatura en grados centígrados 
+    const TIME = respuesta.location.localtime // new Date() // fecha y hora
+    const HORA = '0' + TIME.substring(11,13)
+    console.log(HORA)
+    const LOCATION = respuesta.location.name
+    const DAWN = 7.45 // Horario del amanecer
+    const SUNSET= 18.50 // Horario anochecer
+    const SKY = respuesta.current.condition.text // Sunny - Clear
+    console.log(SKY)
+    const RAIN = false // boolean
+
+    ////// * Elementos * ////
     
     const cielo = document.querySelector('.container') // fondo del contenedor
 
@@ -59,10 +61,10 @@ http.onreadystatechange = function() {
     const degDato = document.querySelector('.deg_dato')
     const timeDato = document.querySelector('.time')
 
+    /// Funciones por momento del día///
+
     function timerDawn() {
-      console.log(flowers)
       // estilos para el amanecer
-      const cielo = document.querySelector('.container')
 
       //Cielo - Sol - Luna - Flores - Estrellas
       cielo.classList.add('skyDawn')
@@ -93,7 +95,7 @@ http.onreadystatechange = function() {
     }
 
     function timerMorning() {
-      const cielo = document.querySelector('.container')
+      
       // estilos para la mañana
       cielo.classList.add('skyMorning')
       cielo.classList.remove('container_animation')
@@ -123,7 +125,7 @@ http.onreadystatechange = function() {
     }
 
     function timerEvening() {
-      const cielo = document.querySelector('.container')
+      
       // estilos para la tarde
       cielo.classList.add('skyEvening')
       cielo.classList.remove('container_animation')
@@ -154,7 +156,7 @@ http.onreadystatechange = function() {
     }
 
     function timerSunset() {
-      const cielo = document.querySelector('.container')
+      
       // estilos para el atardecer
       cielo.classList.add('skySunset')
       cielo.classList.remove('container_animation')
@@ -184,7 +186,7 @@ http.onreadystatechange = function() {
     }
 
     function timerNigth() {
-      const cielo = document.querySelector('.container')
+      
       // estilos para la noche
       cielo.classList.add('skyNight')
       cielo.classList.remove('container_animation')
@@ -216,6 +218,8 @@ http.onreadystatechange = function() {
     function weather () {
       // regulo elementos del DOM según la variable TEMP que me indica los grados centígrados
     }
+
+    // Función que ejecuta estilos según la hora
 
     function timer () {
       
@@ -253,9 +257,9 @@ http.onreadystatechange = function() {
       location.reload(true)
     }
 
-  setTimeout(timer, 5000)
+    setTimeout(timer, 5000)
 
-  //setInterval('document.location.reload()',15000)
+    setInterval('document.location.reload()',300000)
 
   }
 }

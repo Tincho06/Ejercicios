@@ -81,6 +81,9 @@
   top: 10%;
   left: 15%;
   opacity: 1;
+  animation: noche 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
 }
 
 /*Flores según horario*/
@@ -172,4 +175,18 @@
   margin-right: auto;
   margin-top: 5%;
   color: #FFF;
+}
+
+@keyframes noche {
+  0% {
+    top: 30%;
+    left: 75%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 10%;
+    left: 15%;
+    opacity: 1;
+  }
 }
