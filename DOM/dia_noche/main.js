@@ -233,10 +233,10 @@ window.onload = function() {
       if (HORA > 8 && HORA <= 12) {
         timerMorning()
       }
-      if (HORA > 12 && HORA <= 18) {
+      if (HORA > 12 && HORA < 18) {
         timerEvening()
       }
-      if (HORA > 18 && HORA <= 19) {
+      if (HORA >= 18 && HORA <= 19) {
         timerSunset()
       }
 
