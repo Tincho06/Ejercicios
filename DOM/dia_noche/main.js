@@ -25,6 +25,8 @@ window.onload = function() {
     const SUNSET= 18.50 // Horario anochecer
     const SKY = respuesta.current.condition.text // Sunny - Clear - Partly cloudy
     console.log(SKY)
+    const ST = respuesta.current.feelslike_c
+    console.log(ST)
     const RAIN = false // boolean
 
     ////// * Elementos * ////
@@ -60,6 +62,8 @@ window.onload = function() {
     const location = document.querySelector('.location')
     const degDato = document.querySelector('.deg_dato')
     const timeDato = document.querySelector('.time')
+    const skyDato = document.querySelector('.sky_dato')
+    const stDato = document.querySelector('.st_dato')
 
     /// Funciones por momento del día///
 
@@ -224,7 +228,7 @@ window.onload = function() {
     function timer () {
       
       // regulo elementos del DOM según la variable TIME para ver la hora
-      if (HORA > 19 || HORA < 7) {
+      if (HORA > 19 || HORA < 7 || HORA === '00:') {
         timerNigth()
       }
       if (HORA >= 7 && HORA <= 8) {
@@ -243,6 +247,8 @@ window.onload = function() {
       location.innerHTML = LOCATION
       degDato.innerHTML = TEMP + 'º C'
       timeDato.innerHTML = TIME
+      skyDato.innerHTML = 'Cielo ' + SKY
+      stDato.innerHTML = 'ST ' + ST
     }
 
     function visibility () {

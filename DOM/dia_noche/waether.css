@@ -190,12 +190,26 @@
 }
 
 .time {
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
   color: #FFF;
+}
+
+.st_dato {
+  font-size: 2em;
+  text-align: center;
+  color: #FFF;
+  margin-top: 5%;
+}
+
+.sky_dato {
+  font-size: 1,7em;
+  text-align: center;
+  color: #FFF;
+  margin-top: 5%;
 }
 
 /*Animacion transciciones*/
