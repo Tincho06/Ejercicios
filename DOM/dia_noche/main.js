@@ -23,7 +23,7 @@ window.onload = function() {
     const LOCATION = respuesta.location.name
     const DAWN = 7.45 // Horario del amanecer
     const SUNSET= 18.50 // Horario anochecer
-    const SKY = respuesta.current.condition.text // Sunny - Clear
+    const SKY = respuesta.current.condition.text // Sunny - Clear - Partly cloudy
     console.log(SKY)
     const RAIN = false // boolean
 
@@ -224,7 +224,7 @@ window.onload = function() {
     function timer () {
       
       // regulo elementos del DOM según la variable TIME para ver la hora
-      if (HORA > 19 || HORA <= 7) {
+      if (HORA > 19 || HORA < 7) {
         timerNigth()
       }
       if (HORA >= 7 && HORA <= 8) {

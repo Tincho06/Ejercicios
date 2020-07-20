@@ -3,7 +3,11 @@
 /*Cielo según horario*/
 
 .skyDawn {
-  background-color: #F7472D;
+  /*background-color: #F7472D;*/
+  animation: sky_dawn 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .skyMorning {
@@ -17,19 +21,22 @@
 .skySunset {
   /*background-color: #F7005A;*/
   background: rgb(128,2,14);
-  background: linear-gradient(90deg, rgba(255,107,0,1) 0%, rgba(196,12,85,1) 35%, rgba(128,2,14,1) 100%);
+  background: linear-gradient(45deg, rgba(255,107,0,1) 0%, rgba(196,12,85,1) 35%, rgba(128,2,14,1) 100%);
 }
 
 .skyNight {
-  background-color: #010420;
+  /*background-color: #010420;*/
+  background: rgb(0,0,0);
+    background: linear-gradient(-45deg, rgba(0,0,0,1) 0%, rgba(5,2,25,1) 7%, rgba(13,7,55,1) 75%, rgba(2,35,91,1) 100%);
 }
 
 /*Sol según horario*/
 
 .sunDawn {
-  top: 80%;
-  right: 0%;
-  transform: scale(0.8, 0.8); 
+  animation: sun_dawn 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .sunMorning {
@@ -58,10 +65,10 @@
 
 /*Luna según horario*/
 .moonDawn {
-  top: 30%;
-  left: 0%;
-  opacity: 0.5;
-  transform: scale(0.8, 0.8); 
+  animation: moon_dawn 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .moonMorning {
@@ -148,8 +155,8 @@
 }
 
 .screen_cont {
-  width: 25vw;
-  height: 25vh;
+  width: 85%;
+  height: 85%;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -161,8 +168,16 @@
   padding: 10px;
 }
 
+.w_icon {
+  width: 60px;
+  height: 60px;
+  background-image: url('img/w_icons/night/116.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .location {
-  font-size: 2em;
+  font-size: 1,5em;
   text-align: center;
   color: #FFF;
 }
@@ -185,6 +200,33 @@
 
 /*Animacion transciciones*/
 
+@keyframes sky_dawn {
+  0% {
+    background: rgb(0,0,0);
+    background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(5,2,25,1) 7%, rgba(13,7,55,1) 75%, rgba(2,35,91,1) 100%);
+  }
+
+  100% {
+    background: rgb(128,2,14);
+    background: linear-gradient(135deg, rgba(128,2,14,1) 0%, rgba(196,12,85,1) 35%, rgba(255,107,0,1) 100%);
+  }
+}
+
+@keyframes moon_dawn {
+  0% {
+    top: 10%;
+    left: 15%;
+    opacity: 1;
+  }
+
+  100% {
+    top: 30%;
+    left: 0%;
+    opacity: 0.5;
+    transform: scale(0.8, 0.8); 
+  }
+}
+
 @keyframes moon_sunset {
   0% {
     top: 50%;
@@ -204,12 +246,30 @@
     top: 30%;
     left: 75%;
     opacity: 0;
+    transform: scale(0.5, 0.5);
   }
 
   100% {
     top: 10%;
     left: 15%;
     opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes sun_dawn {
+  0% {
+    top: 110%;
+    right: 0%;
+    opacity: 0;
+    transform: scale(0.8, 0.8); 
+  }
+
+  100% {
+    top: 80%;
+    right: 0%;
+    opacity: 1;
+    transform: scale(0.8, 0.8); 
   }
 }
 
