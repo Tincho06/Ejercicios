@@ -11,23 +11,32 @@
 }
 
 .skyMorning {
-  background-color: #43F2F4;
+  /*background-color: #43F2F4;*/
+  animation: sky_morning 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .skyEvening {
-  background-color: #2DA2E5;
+  animation: sky_evening 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .skySunset {
   /*background-color: #F7005A;*/
-  background: rgb(128,2,14);
-  background: linear-gradient(45deg, rgba(255,107,0,1) 0%, rgba(196,12,85,1) 35%, rgba(128,2,14,1) 100%);
+  animation: sky_sunset 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .skyNight {
   /*background-color: #010420;*/
   background: rgb(0,0,0);
-    background: linear-gradient(-45deg, rgba(0,0,0,1) 0%, rgba(5,2,25,1) 7%, rgba(13,7,55,1) 75%, rgba(2,35,91,1) 100%);
+  background: linear-gradient(-45deg, rgba(0,0,0,1) 0%, rgba(5,2,25,1) 7%, rgba(13,7,55,1) 75%, rgba(2,35,91,1) 100%);
 }
 
 /*Sol según horario*/
@@ -40,8 +49,12 @@
 }
 
 .sunMorning {
-  top: 10%;
-  right: 35%;
+  /*top: 10%;
+  right: 35%;*/
+  animation: sun_morning 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .sunEvening {
@@ -78,10 +91,10 @@
 }
 
 .moonEvening {
-  top: 30%;
-  right: 0%;
-  opacity: 0.2;
-  transform: scale(0.5, 0.5); 
+  animation: moon_evening 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .moonSunset {
@@ -214,6 +227,7 @@
 
 /*Animacion transciciones*/
 
+/*Sky*/
 @keyframes sky_dawn {
   0% {
     background: rgb(0,0,0);
@@ -226,6 +240,55 @@
   }
 }
 
+@keyframes sky_morning {
+  0% {
+    background: rgb(128,2,14);
+    background: linear-gradient(135deg, rgba(128,2,14,1) 0%, rgba(196,12,85,1) 35%, rgba(255,107,0,1) 100%);
+  }
+
+  100% {
+    background: rgb(67,242,244);
+    background: linear-gradient(90deg, rgba(67,242,244,1) 13%, rgba(135,231,242,1) 75%, rgba(157,232,245,1) 100%);
+  }
+}
+
+@keyframes sky_evening {
+  0% {
+    background: rgb(67,242,244);
+    background: linear-gradient(90deg, rgba(67,242,244,1) 13%, rgba(135,231,242,1) 75%, rgba(157,232,245,1) 100%);
+  }
+
+  100% {
+    background: rgb(26,217,219);
+    background: linear-gradient(90deg, rgba(26,217,219,1) 13%, rgba(103,198,209,1) 75%, rgba(116,191,204,1) 100%);
+  }
+}
+
+@keyframes sky_sunset {
+  0% {
+    background: rgb(26,217,219);
+    background: linear-gradient(90deg, rgba(26,217,219,1) 13%, rgba(103,198,209,1) 75%, rgba(116,191,204,1) 100%);
+  }
+
+  100% {
+    background: rgb(128,2,14);
+    background: linear-gradient(45deg, rgba(255,107,0,1) 0%, rgba(196,12,85,1) 35%, rgba(128,2,14,1) 100%);
+  }
+}
+
+@keyframes sky_night {
+  0% {
+    background: rgb(128,2,14);
+    background: linear-gradient(45deg, rgba(255,107,0,1) 0%, rgba(196,12,85,1) 35%, rgba(128,2,14,1) 100%);
+  }
+
+  100% {
+    background: rgb(0,0,0);
+    background: linear-gradient(-45deg, rgba(0,0,0,1) 0%, rgba(5,2,25,1) 7%, rgba(13,7,55,1) 75%, rgba(2,35,91,1) 100%);
+  }
+}
+
+/*Moon*/
 @keyframes moon_dawn {
   0% {
     top: 10%;
@@ -238,6 +301,22 @@
     left: 0%;
     opacity: 0.5;
     transform: scale(0.8, 0.8); 
+  }
+}
+
+@keyframes moon_evening {
+  0% {
+    top: 40%;
+    right: 0%;
+    opacity: 0;
+    transform: scale(0.5, 0.5); 
+  }
+
+  100% {
+    top: 30%;
+    right: 0%;
+    opacity: 0.2;
+    transform: scale(0.5, 0.5); 
   }
 }
 
@@ -271,6 +350,7 @@
   }
 }
 
+/*Sun*/
 @keyframes sun_dawn {
   0% {
     top: 110%;
@@ -287,17 +367,35 @@
   }
 }
 
+@keyframes sun_morning {
+  0% {
+    top: 80%;
+    right: 0%;
+    opacity: 1;
+    transform: scale(0.8, 0.8);
+  }
+
+  100% {
+    top: 10%;
+    right: 35%;
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
 @keyframes sun_evening {
   0% {
-    top: 50%;
-    left: 80%;
-    opacity: 0;
+    top: 10%;
+    right: 35%;
+    opacity: 1;
+    
   }
 
   100% {
     top: 3%;
-    left: 45%;
+    right: 55%;
     opacity: 1;
+    
   }
 }
 

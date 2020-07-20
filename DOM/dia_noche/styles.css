@@ -275,28 +275,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 25%;
-    width: 10%;
+    height: 150px;
+    width: 50px;
     position: absolute;
-    right: 7%;
-    bottom: 15%;
+    right: 35%;
+    background-image: url(img/termo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 
 }
 
 .v_stick {
-    height: 66%;
-    width: 16%;
-    position: absolute;
-    left: 42%;
-    bottom: 12%;
-    border-radius: 10px;
-    background-color: red;
-    animation: temperatura 48s;
-    animation-iteration-count: infinite;
+    height: 40px;
+    width: 10px;
+    /*position: absolute;*/
+    /*left: 32%;*/
+    bottom: 50px;
+    border-radius: 3px;
+    background-color: #FFF;
+    /*animation: temperatura 48s;
+    animation-iteration-count: infinite;*/
 
 }
 
-.v_stick_back {
+/*.v_stick_back {
     height: 100%;
     width: 30%;
     position: absolute;
@@ -336,7 +338,7 @@
 .deg {
     border-bottom: 1px solid #000;
     margin-bottom: 150%;
-}
+}*/
 
 @keyframes dia_noche {
     0% {
