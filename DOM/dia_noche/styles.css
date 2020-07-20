@@ -288,57 +288,10 @@
 .v_stick {
     height: 40px;
     width: 10px;
-    /*position: absolute;*/
-    /*left: 32%;*/
     bottom: 50px;
     border-radius: 3px;
     background-color: #FFF;
-    /*animation: temperatura 48s;
-    animation-iteration-count: infinite;*/
-
 }
-
-/*.v_stick_back {
-    height: 100%;
-    width: 30%;
-    position: absolute;
-    border-radius: 15px;
-    background-color: #fff;
-    opacity: 0.85;
-    
-}
-
-.ball {
-    height: 29%;
-    width: 35%;
-    position: absolute;
-    bottom: 4%;
-    border-radius: 50%;
-    background-color: red;
-}
-
-.ball_back {
-    height: 35%;
-    width: 51%;
-    position: absolute;
-    bottom: 0%;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.85;
-}
-
-.scale {
-    width: 12%;
-    height:70%;
-    position: absolute;
-    top: 10%;
-    left: 53%;
-}
-
-.deg {
-    border-bottom: 1px solid #000;
-    margin-bottom: 150%;
-}*/
 
 @keyframes dia_noche {
     0% {
@@ -668,32 +621,4 @@
     100% {
         opacity: 0.2;
     }
-}
-
-@keyframes temperatura {
-    0% {
-        
-        height: 65%;
-    }
-
-    50% {
-        
-        height: 30%;
-    }
-
-    65% {
-        
-        height: 30%;
-    }
-
-    85% {
-        
-        height: 70%;
-    }
-
-    100% {
-        
-        height: 65%;
-    }
-
 }
