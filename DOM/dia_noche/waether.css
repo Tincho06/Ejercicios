@@ -39,6 +39,20 @@
   background: linear-gradient(-45deg, rgba(0,0,0,1) 0%, rgba(5,2,25,1) 7%, rgba(13,7,55,1) 75%, rgba(2,35,91,1) 100%);
 }
 
+.skyCloudy {
+  animation: sky_cloudy 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.skyPCloudy {
+  animation: sky_Pcloudy 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 /*Sol según horario*/
 
 .sunDawn {
@@ -285,6 +299,30 @@
   100% {
     background: rgb(0,0,0);
     background: linear-gradient(-45deg, rgba(0,0,0,1) 0%, rgba(5,2,25,1) 7%, rgba(13,7,55,1) 75%, rgba(2,35,91,1) 100%);
+  }
+}
+
+@keyframes sky_cloudy {
+  0% {
+    background: rgb(26,217,219);
+    background: linear-gradient(90deg, rgba(26,217,219,1) 13%, rgba(103,198,209,1) 75%, rgba(116,191,204,1) 100%);
+  }
+
+  100% {
+    background: rgb(74,92,92);
+    background: linear-gradient(180deg, rgba(74,92,92,1) 13%, rgba(116,155,159,1) 75%, rgba(169,184,186,1) 100%);
+  }
+}
+
+@keyframes sky_Pcloudy {
+  0% {
+    background: rgb(26,217,219);
+    background: linear-gradient(90deg, rgba(26,217,219,1) 13%, rgba(103,198,209,1) 75%, rgba(116,191,204,1) 100%);
+  }
+
+  100% {
+    background: rgb(175,203,203);
+    background: linear-gradient(180deg, rgba(175,203,203,1) 13%, rgba(211,215,215,1) 56%, rgba(141,207,215,1) 100%);
   }
 }
 

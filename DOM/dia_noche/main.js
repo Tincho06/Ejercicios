@@ -255,11 +255,29 @@ window.onload = function() {
 
       wIcon.style = 'background-image: url('+ COND_ICON +'); background-size: contain; background-repeat: no-repeat; with: 80px; height: 80px;'
      
+      rain()
       //visibility()
     }
 
     function rain () {
       // regulo elementos del DOM según la variable RAIN que indica si llueve o no.
+      if (SKY === 'Nublado') {
+        cielo.classList.add('skyCloudy')
+        cielo.classList.remove('container_animation')
+        sun.classList.add('sunNight')
+        sun.classList.remove('sunEvening')
+        moon.classList.add('moonMorning')
+        moon.classList.remove('moonEvening')
+      }
+
+      if (SKY === 'Parcialmente nublado') {
+        cielo.classList.add('skyPCloudy')
+        cielo.classList.remove('container_animation')
+        sun.classList.add('sunNight')
+        sun.classList.remove('sunEvening')
+        moon.classList.add('moonMorning')
+        moon.classList.remove('moonEvening')
+      }
     }
 
     function actualizar(){
