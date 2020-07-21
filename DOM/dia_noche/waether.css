@@ -182,9 +182,9 @@
 }
 
 .w_icon {
-  width: 60px;
-  height: 60px;
-  background-image: url('img/w_icons/night/116.png');
+  width: 80px;
+  height: 80px;
+  
   background-size: contain;
   background-repeat: no-repeat;
 }
