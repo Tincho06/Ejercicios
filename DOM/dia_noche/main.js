@@ -2,7 +2,7 @@ window.onload = function() {
 
   const http = new XMLHttpRequest()
 
-  http.open('GET', 'https://api.weatherapi.com/v1/current.json?key=f0b13ebf0a6b46aa91b25351201707&q=Córdoba')
+  http.open('GET', 'https://api.weatherapi.com/v1/current.json?key=f0b13ebf0a6b46aa91b25351201707&q=Córdoba&lang=es')
   http.send()
 
   http.onreadystatechange = function() {
@@ -250,7 +250,7 @@ window.onload = function() {
       location.innerHTML = LOCATION
       degDato.innerHTML = TEMP + 'º C'
       timeDato.innerHTML = TIME
-      skyDato.innerHTML = 'Cielo ' + SKY
+      skyDato.innerHTML = SKY
       stDato.innerHTML = 'ST ' + ST
 
       wIcon.style = 'background-image: url('+ COND_ICON +'); background-size: contain; background-repeat: no-repeat; with: 80px; height: 80px;'
