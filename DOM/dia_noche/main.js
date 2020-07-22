@@ -276,18 +276,7 @@ window.onload = function() {
         moon.classList.remove('moonEvening')
       }
 
-      if (SKY === 'Cielo cubierto') {
-        cielo.classList.add('skyCloudy')
-        cielo.classList.remove('container_animation')
-        sun.classList.add('sunNight')
-        sun.classList.remove('sunEvening')
-        moon.classList.add('moonMorning')
-        moon.classList.remove('moonEvening')
-        stars.classList.remove('starsNight')
-        stars.classList.add('starsEvening')
-      }
-
-      if (SKY === 'Lluvia moderada') {
+      if (SKY === 'Lluvia moderada' || SKY === 'Ligeras lluvias' || SKY === 'Cielo cubierto') {
         cielo.classList.add('skyCloudy')
         cielo.classList.remove('container_animation')
         sun.classList.add('sunNight')
