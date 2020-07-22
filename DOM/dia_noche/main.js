@@ -257,7 +257,7 @@ window.onload = function() {
       skyDato.innerHTML = SKY
       stDato.innerHTML = 'ST ' + ST
 
-      wIcon.style = 'background-image: url('+ COND_ICON +'); background-size: contain; background-repeat: no-repeat; with: 80px; height: 80px;'
+      wIcon.style = 'background-image: url('+ COND_ICON +'); background-size: contain; background-repeat: no-repeat;'
      
       rain()
 
