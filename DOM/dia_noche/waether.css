@@ -599,7 +599,7 @@
   }
 
   /* Termometro */
-  .temp {
+  /*.temp {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -614,9 +614,9 @@
   .v_stick {
       /*height: 30px;
       width: 10px;*/
-      margin-bottom: 30px;
+      /*margin-bottom: 30px;
       border-radius: 3px;
       background-color: #FFF;
       align-self: flex-end;
   }
-}*/
+}**//*/
