@@ -1,3 +1,6 @@
+
+
+
 // function visibility () {
     //   // regulo elementos del DOM según la variable SKY que indica nubes en el cielo
     //   if (SKY === 'Sunny') {

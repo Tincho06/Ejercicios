@@ -68,6 +68,10 @@ window.onload = function() {
     const stDato = document.querySelector('.st_dato')
     const wIcon = document.querySelector('.w_icon')
 
+    ///Establecer momentos del día
+    function dayMoment() {
+    }
+
     /// Funciones por momento del día///
 
     function timerDawn() {
@@ -231,7 +235,7 @@ window.onload = function() {
     function timer () {
       
       // regulo elementos del DOM según la variable TIME para ver la hora
-      if (HORA > 19 || HORA < 7 || HORA === '00:') {
+      if (HORA > 19 || HORA < 7 || HORA === '00:' || HORA === '01:' || HORA === '02:' || HORA === '03:' || HORA === '04:' || HORA === '05:' || HORA === '06:') {
         timerNigth()
       }
       if (HORA >= 7 && HORA <= 8) {
@@ -256,7 +260,9 @@ window.onload = function() {
       wIcon.style = 'background-image: url('+ COND_ICON +'); background-size: contain; background-repeat: no-repeat; with: 80px; height: 80px;'
      
       rain()
-      //visibility()
+
+      temperature()
+      
     }
 
     function rain () {
@@ -270,6 +276,28 @@ window.onload = function() {
         moon.classList.remove('moonEvening')
       }
 
+      if (SKY === 'Cielo cubierto') {
+        cielo.classList.add('skyCloudy')
+        cielo.classList.remove('container_animation')
+        sun.classList.add('sunNight')
+        sun.classList.remove('sunEvening')
+        moon.classList.add('moonMorning')
+        moon.classList.remove('moonEvening')
+        stars.classList.remove('starsNight')
+        stars.classList.add('starsEvening')
+      }
+
+      if (SKY === 'Lluvia moderada') {
+        cielo.classList.add('skyCloudy')
+        cielo.classList.remove('container_animation')
+        sun.classList.add('sunNight')
+        sun.classList.remove('sunEvening')
+        moon.classList.add('moonMorning')
+        moon.classList.remove('moonEvening')
+        stars.classList.remove('starsNight')
+        stars.classList.add('starsEvening')
+      }
+
       if (SKY === 'Parcialmente nublado') {
         cielo.classList.add('skyPCloudy')
         cielo.classList.remove('container_animation')
@@ -278,6 +306,13 @@ window.onload = function() {
         moon.classList.add('moonMorning')
         moon.classList.remove('moonEvening')
       }
+    }
+
+    function temperature() {
+      grados = TEMP * 2.5
+      //console.log(grados)
+
+      termometro.style.height = grados
     }
 
     function actualizar(){
