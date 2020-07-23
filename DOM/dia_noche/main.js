@@ -1,5 +1,7 @@
 window.onload = function() {
 
+  
+  
   const http = new XMLHttpRequest()
 
   http.open('GET', 'https://api.weatherapi.com/v1/current.json?key=f0b13ebf0a6b46aa91b25351201707&q=Córdoba&lang=es')
@@ -11,7 +13,7 @@ window.onload = function() {
     if (http.responseText === '') {
       return
     }
-
+    
     const respuesta = JSON.parse(http.responseText)
 
     /// Variables con datos consulta ///
@@ -20,9 +22,13 @@ window.onload = function() {
     const TIME = respuesta.location.localtime // new Date() // fecha y hora
     const HORA = '0' + TIME.substring(11,13)
     console.log(HORA)
+    const WIND_DIR = respuesta.current.wind_dir // Dirección del viento
+    const WIND_KPH = respuesta.current.wind_kph // Velocidad del viento
+    console.log(WIND_DIR)
+    console.log(WIND_KPH)
     const LOCATION = respuesta.location.name
-    const DAWN = 7.45 // Horario del amanecer
-    const SUNSET= 18.50 // Horario anochecer
+    //const DAWN = 7.45 // Horario del amanecer
+    //const SUNSET= 18.50 // Horario anochecer - respuesta.astronomy.astro.sunset
     const SKY = respuesta.current.condition.text // Sunny - Clear - Partly cloudy - Light drizzle - Mist - Overcast
     const COND_ICON = respuesta.current.condition.icon
     console.log(COND_ICON)
@@ -30,6 +36,7 @@ window.onload = function() {
     const ST = respuesta.current.feelslike_c
     console.log(ST)
     const RAIN = false // boolean
+
 
     ////// * Elementos * ////
     
@@ -272,6 +279,9 @@ window.onload = function() {
         cielo.classList.remove('container_animation')
         sun.classList.add('sunNight')
         sun.classList.remove('sunEvening')
+        sun.classList.remove('sunMorning')
+        sun.classList.remove('sunSunset')
+        sun.classList.remove('sunDawn')
         moon.classList.add('moonMorning')
         moon.classList.remove('moonEvening')
       }
@@ -281,6 +291,9 @@ window.onload = function() {
         cielo.classList.remove('container_animation')
         sun.classList.add('sunNight')
         sun.classList.remove('sunEvening')
+        sun.classList.remove('sunMorning')
+        sun.classList.remove('sunSunset')
+        sun.classList.remove('sunDawn')
         moon.classList.add('moonMorning')
         moon.classList.remove('moonEvening')
         stars.classList.remove('starsNight')
@@ -292,6 +305,9 @@ window.onload = function() {
         cielo.classList.remove('container_animation')
         sun.classList.add('sunNight')
         sun.classList.remove('sunEvening')
+        sun.classList.remove('sunMorning')
+        sun.classList.remove('sunSunset')
+        sun.classList.remove('sunDawn')
         moon.classList.add('moonMorning')
         moon.classList.remove('moonEvening')
       }

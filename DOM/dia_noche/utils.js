@@ -1,4 +1,24 @@
+///
+  const req = new XMLHttpRequest()
 
+  req.open('GET', 'http://api.weatherapi.com/v1/astronomy.json?key=f0b13ebf0a6b46aa91b25351201707&q=córdoba&dt=2020-07-22')
+  req.send()
+
+  req.onreadystatechange = function solEstado() {
+    req.responseText
+
+    if (req.responseText === '') {
+      return
+    }
+    
+    const respuestaAstro = JSON.parse(req.responseText)
+
+    const SUNSET = respuestaAstro.astronomy.astro.sunset
+    const DAWN = respuestaAstro.astronomy.astro.sunrise
+    console.log(SUNSET)
+    console.log(DAWN)
+  }
+  ///
 
 
 // function visibility () {

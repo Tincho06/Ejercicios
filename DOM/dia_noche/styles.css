@@ -294,6 +294,28 @@
     align-self: flex-end;
 }
 
+.bruju {
+    width: 150px;
+    height: 150px;
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('img/bruju.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bruju_stick {
+    width: 80px;
+    height: 80px;
+    background-image: url('img/bruju_stick.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(0deg);
+    align-self: center;
+}
+
 @keyframes dia_noche {
     0% {
         background-color: #DFF8F9;
