@@ -345,7 +345,7 @@ window.onload = function() {
       if (WIND_DIR === 'NNE') {
         brujuDato.style = "transform: rotate(23deg);"
       }
-      if (WIND_DIR === 'NEE') {
+      if (WIND_DIR === 'ENE') {
         brujuDato.style = "transform: rotate(68deg);"
       }
       if (WIND_DIR === 'NW') {
@@ -354,7 +354,7 @@ window.onload = function() {
       if (WIND_DIR === 'NNW') {
         brujuDato.style = "transform: rotate(-23deg);"
       }
-      if (WIND_DIR === 'NWW') {
+      if (WIND_DIR === 'WNW') {
         brujuDato.style = "transform: rotate(-68deg);"
       }
       if (WIND_DIR === 'SE') {
@@ -363,7 +363,7 @@ window.onload = function() {
       if (WIND_DIR === 'SSE') {
         brujuDato.style = "transform: rotate(158deg);"
       }
-      if (WIND_DIR === 'SEE') {
+      if (WIND_DIR === 'ESE') {
         brujuDato.style = "transform: rotate(113deg);"
       }
       if (WIND_DIR === 'SW') {
@@ -372,7 +372,7 @@ window.onload = function() {
       if (WIND_DIR === 'SSW') {
         brujuDato.style = "transform: rotate(-158deg);"
       }
-      if (WIND_DIR === 'SWW') {
+      if (WIND_DIR === 'WSW') {
         brujuDato.style = "transform: rotate(-113deg);"
       }
     }
