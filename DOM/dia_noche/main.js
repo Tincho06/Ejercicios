@@ -74,6 +74,9 @@ window.onload = function() {
     const skyDato = document.querySelector('.sky_dato')
     const stDato = document.querySelector('.st_dato')
     const wIcon = document.querySelector('.w_icon')
+    const windDato = document.querySelector('.wind_dir')
+
+    const brujuDato = document.querySelector('.bruju_stick')
 
     ///Establecer momentos del día
     function dayMoment() {
@@ -263,12 +266,15 @@ window.onload = function() {
       timeDato.innerHTML = TIME
       skyDato.innerHTML = SKY
       stDato.innerHTML = 'ST ' + ST
+      windDato.innerHTML = 'Viento ' + WIND_DIR + ' / ' + WIND_KPH + ' Kph'
 
       wIcon.style = 'background-image: url('+ COND_ICON +'); background-size: contain; background-repeat: no-repeat;'
      
       rain()
 
       temperature()
+
+      windDirection()
       
     }
 
@@ -318,6 +324,33 @@ window.onload = function() {
       //console.log(grados)
 
       termometro.style.height = grados
+    }
+
+    function windDirection() {
+      if (WIND_DIR === 'N') {
+        brujuDato.style = "transform: rotate(0deg);"
+      }
+      if (WIND_DIR === 'S') {
+        brujuDato.style = "transform: rotate(180deg);"
+      }
+      if (WIND_DIR === 'E') {
+        brujuDato.style = "transform: rotate(90deg);"
+      }
+      if (WIND_DIR === 'W') {
+        brujuDato.style = "transform: rotate(-90deg);"
+      }
+      if (WIND_DIR === 'NE') {
+        brujuDato.style = "transform: rotate(45deg);"
+      }
+      if (WIND_DIR === 'NW') {
+        brujuDato.style = "transform: rotate(-45deg);"
+      }
+      if (WIND_DIR === 'SE') {
+        brujuDato.style = "transform: rotate(135deg);"
+      }
+      if (WIND_DIR === 'SW') {
+        brujuDato.style = "transform: rotate(-135deg);"
+      }
     }
 
     function actualizar(){
