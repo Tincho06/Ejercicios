@@ -342,14 +342,38 @@ window.onload = function() {
       if (WIND_DIR === 'NE') {
         brujuDato.style = "transform: rotate(45deg);"
       }
+      if (WIND_DIR === 'NNE') {
+        brujuDato.style = "transform: rotate(23deg);"
+      }
+      if (WIND_DIR === 'NEE') {
+        brujuDato.style = "transform: rotate(68deg);"
+      }
       if (WIND_DIR === 'NW') {
         brujuDato.style = "transform: rotate(-45deg);"
+      }
+      if (WIND_DIR === 'NNW') {
+        brujuDato.style = "transform: rotate(-23deg);"
+      }
+      if (WIND_DIR === 'NWW') {
+        brujuDato.style = "transform: rotate(-68deg);"
       }
       if (WIND_DIR === 'SE') {
         brujuDato.style = "transform: rotate(135deg);"
       }
+      if (WIND_DIR === 'SSE') {
+        brujuDato.style = "transform: rotate(158deg);"
+      }
+      if (WIND_DIR === 'SEE') {
+        brujuDato.style = "transform: rotate(113deg);"
+      }
       if (WIND_DIR === 'SW') {
         brujuDato.style = "transform: rotate(-135deg);"
+      }
+      if (WIND_DIR === 'SSW') {
+        brujuDato.style = "transform: rotate(-158deg);"
+      }
+      if (WIND_DIR === 'SWW') {
+        brujuDato.style = "transform: rotate(-113deg);"
       }
     }
 
