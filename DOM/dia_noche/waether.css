@@ -526,6 +526,16 @@
     color: #FFF;
   }
 
+  .wind_dir {
+  font-size: 1.4em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  color: #FFF;
+}
+
+
   /* Termometro */
   .temp {
       display: flex;
