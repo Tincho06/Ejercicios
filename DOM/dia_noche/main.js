@@ -1,7 +1,6 @@
 window.onload = function() {
 
   
-  
   const http = new XMLHttpRequest()
 
   http.open('GET', 'https://api.weatherapi.com/v1/current.json?key=f0b13ebf0a6b46aa91b25351201707&q=Córdoba&lang=es')
@@ -75,6 +74,8 @@ window.onload = function() {
     const stDato = document.querySelector('.st_dato')
     const wIcon = document.querySelector('.w_icon')
     const windDato = document.querySelector('.wind_dir')
+    const hourDato = document.querySelector('.date_hour_txt')
+    const recargaBtn = document.querySelector('.refresh')
 
     const brujuDato = document.querySelector('.bruju_stick')
 
@@ -379,6 +380,24 @@ window.onload = function() {
 
     function actualizar(){
       location.reload(true)
+    }
+
+    // Para la fecha de hoy 
+    Date.prototype.today = function() { 
+        return ((this.getDate() < 10)?"0":"") + this.getDate() +"/"+(((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1) +"/"+ this.getFullYear(); 
+    } 
+
+    // Para la hora actual 
+    Date.prototype.timeNow = function() { 
+        return ((this.getHours() < 10)?"0":"") + this.getHours() +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds(); 
+    } 
+    const datetime = new Date().today() + " || " + new Date().timeNow()
+    console.log(datetime)
+
+    hourDato.innerHTML = datetime
+
+    recargaBtn.onclick = function() {
+      document.location.reload()
     }
 
     setTimeout(timer, 5000)
