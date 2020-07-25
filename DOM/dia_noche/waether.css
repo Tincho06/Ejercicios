@@ -591,20 +591,34 @@
 
 @media only screen and (max-width: 750px) {
   .clock {
-    visibility: hidden;
+    /*visibility: hidden;*/
+    display: none;
   }
 
   .bruju {
-    visibility: hidden;
+    /*visibility: hidden;*/
+    display: none;
   }
 
   .temp {
-    visibility: hidden;
+    /*visibility: hidden;*/
+    display: none;
+  }
+
+  .screen {
+    border: 2px solid #666;
+    border-radius: 20px;
+    opacity: 0.3;
+    background-color: #000;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 70%;
+    height: 60%;
   }
 
   .screen_cont {
-    width: 300px;
-    height: 500px;
+    
     /*display: flex;
     align-items: center;
     justify-content: center;
